@@ -17,6 +17,10 @@
 
     <link rel="icon" href="assets/portrait.png">
 
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://adriancerenado.github.io/">
@@ -38,6 +42,8 @@
 </head>
 
 <body>
+    <!-- Top Reading Scroll Progress Indicator -->
+    <div id="scroll-progress" aria-hidden="true"></div>
 
     <!-- ==========================================================================
        HEADER & NAVIGATION BAR
@@ -110,7 +116,7 @@
         <!-- Hero Section -->
         <section class="section hero-section" id="home">
             <div class="container grid-2">
-                <div class="hero-left">
+                <div class="hero-left reveal-left">
                     <div class="hero-status" id="avail-status">AVAILABLE FOR OPPORTUNITIES</div>
                     <h1 class="hero-title">Building digital solutions that solve real problems.</h1>
                     <p class="hero-subtitle">Developer focused on building useful, reliable, and user-friendly digital
@@ -142,7 +148,7 @@
                     </div>
                 </div>
 
-                <div class="hero-right">
+                <div class="hero-right reveal-right delay-1">
                     <div class="portrait-frame">
                         <img src="assets/portrait.png" alt="Adrian Cerenado Portrait" loading="eager">
                         <div class="floating-code-card">
@@ -162,7 +168,7 @@
         </section>
 
         <!-- Trust Indicators Bar -->
-        <div class="trust-indicators">
+        <div class="trust-indicators reveal">
             <div class="container trust-grid">
                 <div class="trust-item">
                     <span class="trust-val">3+</span>
@@ -186,13 +192,13 @@
         <!-- About Section -->
         <section class="section" id="about">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal">
                     <span class="section-tag">A little about me</span>
                     <h2 class="section-title">Driven by logic & practicality.</h2>
                 </div>
 
                 <div class="grid-2">
-                    <div class="about-bio">
+                    <div class="about-bio reveal-left">
                         <p>I am a developer and IT support specialist who discovered my passion for technology through
                             system problem-solving and creation. I enjoy writing clean code that translates into
                             reliable, user-friendly tools for everyday administrative and community needs.</p>
@@ -204,7 +210,7 @@
                             eager to explore new frameworks, tools, and paradigms.</p>
                     </div>
 
-                    <div class="focus-card">
+                    <div class="focus-card reveal-right delay-1">
                         <h3>Currently Focused On</h3>
                         <ul class="focus-list" id="focus-list">
                             <!-- Rendered Dynamically -->
@@ -217,14 +223,14 @@
         <!-- Skills Section -->
         <section class="section" id="skills">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal">
                     <span class="section-tag">Tech Stack</span>
                     <h2 class="section-title">Tools & Capabilities.</h2>
                     <p class="section-subtitle">Real-world technical skills grouped by category. No arbitrary percentage
                         bars.</p>
                 </div>
 
-                <div class="skills-grid" id="skills-grid">
+                <div class="skills-grid reveal" id="skills-grid">
                     <!-- Rendered Dynamically -->
                 </div>
             </div>
@@ -233,14 +239,14 @@
         <!-- Projects Section -->
         <section class="section" id="projects">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal">
                     <span class="section-tag">Selected Work</span>
                     <h2 class="section-title">Projects & Systems.</h2>
                     <p class="section-subtitle">A collection of web applications and database systems I've developed.
                     </p>
                 </div>
 
-                <div class="project-filters">
+                <div class="project-filters reveal">
                     <button class="filter-btn active" data-filter="all">All Projects</button>
                     <button class="filter-btn" data-filter="web">Web Apps</button>
                     <button class="filter-btn" data-filter="systems">Systems</button>
@@ -252,7 +258,7 @@
                     <button id="clear-tech-filter-btn">Clear Filter</button>
                 </div>
 
-                <div class="projects-grid" id="projects-grid">
+                <div class="projects-grid reveal" id="projects-grid">
                     <!-- Rendered Dynamically -->
                 </div>
             </div>
@@ -261,13 +267,13 @@
         <!-- Experience Section -->
         <section class="section" id="experience">
             <div class="container">
-                <div class="section-header"
+                <div class="section-header reveal"
                     style="max-width: none; text-align: center; margin-bottom: var(--space-16);">
                     <span class="section-tag">Journey</span>
                     <h2 class="section-title">Experience & Timeline</h2>
                 </div>
 
-                <div class="experience-timeline" id="experience-timeline">
+                <div class="experience-timeline reveal" id="experience-timeline">
                     <!-- Rendered Dynamically -->
                 </div>
             </div>
@@ -276,14 +282,14 @@
         <!-- Certifications Section -->
         <section class="section" id="certifications">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal">
                     <span class="section-tag">Credentials</span>
                     <h2 class="section-title">Certifications & Learning</h2>
                     <p class="section-subtitle">Verified professional credentials demonstrating technical competency and
                         persistent development.</p>
                 </div>
 
-                <div class="certs-filters">
+                <div class="certs-filters reveal">
                     <button class="filter-btn active" data-cert-filter="all">All Credentials</button>
                     <button class="filter-btn" data-cert-filter="development">Development</button>
                     <button class="filter-btn" data-cert-filter="database">Database</button>
@@ -291,11 +297,11 @@
                     <button class="filter-btn" data-cert-filter="networking">Networking</button>
                 </div>
 
-                <div class="certs-grid" id="certs-grid">
+                <div class="certs-grid reveal" id="certs-grid">
                     <!-- Rendered Dynamically -->
                 </div>
 
-                <div class="currently-learning-box">
+                <div class="currently-learning-box reveal" style="margin-top: var(--space-12);">
                     <h3>
                         <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
@@ -313,14 +319,14 @@
         <!-- Blog Section -->
         <section class="section" id="blog">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal">
                     <span class="section-tag">Developer Notes</span>
                     <h2 class="section-title">Notes, Tutorials & Insights</h2>
                     <p class="section-subtitle">Writing about coding issues, systems architecture, and database logic I
                         solve along the way.</p>
                 </div>
 
-                <div class="blog-grid" id="blog-grid">
+                <div class="blog-grid reveal" id="blog-grid">
                     <!-- Rendered Dynamically -->
                 </div>
             </div>
@@ -329,7 +335,7 @@
         <!-- GitHub Section -->
         <section class="section" id="github">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal">
                     <span class="section-tag">Code Activity</span>
                     <h2 class="section-title">Open Source & Activity</h2>
                     <p class="section-subtitle">Showcasing current source files, developer contributions, and
@@ -337,7 +343,7 @@
                 </div>
 
                 <div class="github-grid">
-                    <div class="github-repos">
+                    <div class="github-repos reveal-left">
                         <h3
                             style="font-size: 1.15rem; margin-bottom: var(--space-4); display: flex; align-items: center; gap: var(--space-2)">
                             💻 Selected Repositories
@@ -353,7 +359,7 @@
                         </div>
                     </div>
 
-                    <div class="proof-of-work-card">
+                    <div class="proof-of-work-card reveal-right delay-1">
                         <div class="pow-header">
                             <div class="pow-count" id="pow-count">384</div>
                             <div class="pow-label">Contributions this Year</div>
@@ -381,7 +387,7 @@
 
         <!-- Resume Action Section -->
         <section class="section resume-section" id="resume">
-            <div class="container resume-wrapper">
+            <div class="container resume-wrapper reveal">
                 <div class="resume-left">
                     <h2>Want the full professional story?</h2>
                     <p>Read detailed descriptions of my work history, qualifications, tech skills, and complete project
@@ -413,7 +419,7 @@
         <!-- Contact Section -->
         <section class="section" id="contact">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal">
                     <span class="section-tag">Get in Touch</span>
                     <h2 class="section-title">Let's build something useful.</h2>
                     <p class="section-subtitle">I'm open to freelance work, full-time opportunities, collaborations, and
@@ -421,7 +427,7 @@
                 </div>
 
                 <div class="contact-grid">
-                    <div class="contact-info">
+                    <div class="contact-info reveal-left">
                         <p class="contact-bio">Have a project idea, a system that needs optimization, or looking to add
                             a dedicated developer to your team? Drop me a message and I'll get back to you within 24
                             hours.</p>
@@ -454,7 +460,7 @@
                         </div>
                     </div>
 
-                    <form class="contact-form" id="contact-form" novalidate>
+                    <form class="contact-form reveal-right delay-1" id="contact-form" novalidate>
                         <div class="form-group">
                             <label for="form-name" class="form-label">Name</label>
                             <input type="text" id="form-name" class="form-input" placeholder="Your Name" required>
@@ -488,8 +494,8 @@
 
     <!-- ==========================================================================
        FOOTER
-       ========================================================================== */
-  <footer class="footer">
+       ========================================================================== -->
+  <footer class="footer reveal">
     <div class="container">
       <div class="footer-top">
         <div class="footer-left">
@@ -532,6 +538,13 @@
       </div>
     </div>
   </footer>
+
+    <!-- Back To Top Floating Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Scroll to top">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path d="M18 15l-6-6-6 6"></path>
+        </svg>
+    </button>
 
   <!-- ==========================================================================
        DYNAMIC OVERLAY MODALS & PORTALS
@@ -659,6 +672,40 @@
                 focusList.appendChild(li);
             });
 
+            /* ==========================================================================
+               SCROLL REVEAL OBSERVER & SCROLL TRANSITIONS
+               ========================================================================== */
+            let revealObserver;
+            function initScrollObserver() {
+                if ("IntersectionObserver" in window) {
+                    revealObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("is-visible");
+                                revealObserver.unobserve(entry.target);
+                            }
+                        });
+                    }, {
+                        root: null,
+                        threshold: 0.08,
+                        rootMargin: "0px 0px -40px 0px"
+                    });
+                }
+            }
+
+            function observeReveals() {
+                const revealElements = document.querySelectorAll(".reveal:not(.is-visible), .reveal-left:not(.is-visible), .reveal-right:not(.is-visible), .reveal-scale:not(.is-visible)");
+                revealElements.forEach(el => {
+                    if (revealObserver) {
+                        revealObserver.observe(el);
+                    } else {
+                        el.classList.add("is-visible");
+                    }
+                });
+            }
+
+            initScrollObserver();
+
             // 2. Render categorized skills
             const skillsGrid = document.getElementById("skills-grid");
             skillsGrid.innerHTML = "";
@@ -671,9 +718,11 @@
                 skillCategories[skill.category].push(skill.name);
             });
 
+            let skillIdx = 0;
             for (const [category, skills] of Object.entries(skillCategories)) {
                 const card = document.createElement("div");
-                card.className = "skills-card";
+                card.className = `skills-card reveal delay-${(skillIdx % 4) + 1}`;
+                skillIdx++;
 
                 const h3 = document.createElement("h3");
                 h3.textContent = category;
@@ -730,7 +779,7 @@
                 const isStackView = currentCategoryFilter === "all" && !currentTechFilter && filtered.length >= 3;
 
                 if (isStackView) {
-                    grid.className = "projects-stack-container";
+                    grid.className = "projects-stack-container reveal";
 
                     filtered.forEach((proj, idx) => {
                         const card = document.createElement("div");
@@ -807,9 +856,9 @@
                         return;
                     }
 
-                    filtered.forEach(proj => {
+                    filtered.forEach((proj, idx) => {
                         const card = document.createElement("div");
-                        card.className = "project-card";
+                        card.className = `project-card reveal delay-${(idx % 3) + 1}`;
                         card.setAttribute("data-id", proj.id);
 
                         // Card Header
@@ -894,6 +943,7 @@
                         grid.appendChild(card);
                     });
                 }
+                observeReveals();
             }
 
             function setTechFilter(techName) {
@@ -933,9 +983,9 @@
             const timeline = document.getElementById("experience-timeline");
             timeline.innerHTML = "";
 
-            data.experience.forEach(exp => {
+            data.experience.forEach((exp, idx) => {
                 const item = document.createElement("div");
-                item.className = "timeline-item";
+                item.className = `timeline-item reveal delay-${(idx % 3) + 1}`;
 
                 const dot = document.createElement("div");
                 dot.className = "timeline-dot";
@@ -995,9 +1045,9 @@
                     return;
                 }
 
-                filtered.forEach(cert => {
+                filtered.forEach((cert, idx) => {
                     const card = document.createElement("div");
-                    card.className = "cert-card";
+                    card.className = `cert-card reveal delay-${(idx % 3) + 1}`;
 
                     const meta = document.createElement("div");
                     meta.className = "cert-meta";
@@ -1036,6 +1086,7 @@
                     card.appendChild(action);
                     grid.appendChild(card);
                 });
+                observeReveals();
             }
 
             document.querySelectorAll("#certifications .certs-filters .filter-btn").forEach(btn => {
@@ -1052,9 +1103,9 @@
             // Render Currently learning
             const learningContainer = document.getElementById("learning-items");
             learningContainer.innerHTML = "";
-            data.currentlyLearning.forEach(item => {
+            data.currentlyLearning.forEach((item, idx) => {
                 const itemDiv = document.createElement("div");
-                itemDiv.className = "learning-item";
+                itemDiv.className = `learning-item reveal delay-${(idx % 3) + 1}`;
 
                 const info = document.createElement("div");
                 info.className = "learning-info";
@@ -1086,9 +1137,9 @@
             // 6. Render Blog Articles
             const blogGrid = document.getElementById("blog-grid");
             blogGrid.innerHTML = "";
-            data.blog.forEach(article => {
+            data.blog.forEach((article, idx) => {
                 const card = document.createElement("article");
-                card.className = "blog-card";
+                card.className = `blog-card reveal delay-${(idx % 3) + 1}`;
 
                 const meta = document.createElement("div");
                 meta.className = "blog-card-meta";
@@ -1141,9 +1192,9 @@
             // 7. Render Selected GitHub repositories
             const repoContainer = document.getElementById("github-repos-container");
             repoContainer.innerHTML = "";
-            data.githubMock.repos.forEach(repo => {
+            data.githubMock.repos.forEach((repo, idx) => {
                 const card = document.createElement("div");
-                card.className = "repo-card";
+                card.className = `repo-card reveal delay-${(idx % 2) + 1}`;
 
                 const header = document.createElement("div");
                 header.className = "repo-header";
@@ -1248,26 +1299,46 @@
             }
 
             /* ==========================================================================
-               NAVIGATION SCROLL SPY & SCROLL LISTENER
+               NAVIGATION SCROLL SPY, PROGRESS BAR & BACK TO TOP
                ========================================================================== */
             const header = document.getElementById("header");
             const navLinks = document.querySelectorAll(".nav-link");
             const sections = document.querySelectorAll("section");
+            const scrollProgressBar = document.getElementById("scroll-progress");
+            const backToTopBtn = document.getElementById("back-to-top");
 
             window.addEventListener("scroll", () => {
+                const scrollY = window.scrollY;
+
                 // Sticky Header scroll styling
-                if (window.scrollY > 20) {
+                if (scrollY > 20) {
                     header.classList.add("scrolled");
                 } else {
                     header.classList.remove("scrolled");
                 }
 
+                // Top Reading Scroll Progress Indicator
+                const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if (totalHeight > 0 && scrollProgressBar) {
+                    const progressPct = Math.min(100, Math.max(0, (scrollY / totalHeight) * 100));
+                    scrollProgressBar.style.width = `${progressPct}%`;
+                }
+
+                // Floating Back to Top Button
+                if (backToTopBtn) {
+                    if (scrollY > 350) {
+                        backToTopBtn.classList.add("is-visible");
+                    } else {
+                        backToTopBtn.classList.remove("is-visible");
+                    }
+                }
+
                 // Scroll spy active indicator sync
                 let currentSectionId = "home";
                 sections.forEach(sec => {
-                    const top = sec.offsetTop - 120;
+                    const top = sec.offsetTop - 140;
                     const height = sec.offsetHeight;
-                    if (window.scrollY >= top && window.scrollY < top + height) {
+                    if (scrollY >= top && scrollY < top + height) {
                         currentSectionId = sec.getAttribute("id");
                     }
                 });
@@ -1279,6 +1350,15 @@
                     }
                 });
             });
+
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener("click", () => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                });
+            }
+
+            // Initial trigger for reveal observer on page load
+            observeReveals();
 
             // Mobile Hamburger Navigation Toggle
             const mobileToggle = document.getElementById("mobile-toggle");
