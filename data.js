@@ -318,4 +318,6 @@ This simple index reduced query response times significantly. Designing a databa
             }
         ]
     }
+
 };
+
